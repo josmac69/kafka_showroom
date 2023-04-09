@@ -26,7 +26,9 @@ stop-single-multi:
 	docker compose -f $(COMPOSE_FILE_SINGLE_MULTI) down
 
 create-network:
-	docker network inspect $(DOCKER_NETWORK) >/dev/null 2>&1 || docker network create (DOCKER_NETWORK)
+	mkdir -p data_inputs data_outputs secrets
+	chmod 777 data_inputs data_outputs secrets
+	docker network inspect $(DOCKER_NETWORK) >/dev/null 2>&1 || docker network create $(DOCKER_NETWORK)
 
 build-python:
 	docker build --progress=plain --no-cache -t "$(KAFKA_PYTHON_IMAGE)" -f Dockerfile.python .
