@@ -3,7 +3,7 @@ Kafka streaming platform - my learnings, tests and examples
 
 ***
 
-* This repository uses docker compose config yaml files from repository https://github.com/conduktor/kafka-stack-docker-compose
+* This repository uses modified docker compose config yaml files from repository https://github.com/conduktor/kafka-stack-docker-compose
 *
 
 ***
