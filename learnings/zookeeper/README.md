@@ -33,3 +33,24 @@ Apache ZooKeeper is an open-source, distributed, highly reliable, and scalable c
 6. Coordination of distributed applications: Apache Hadoop, HBase, Apache Kafka, and Apache Solr are examples of distributed applications that use ZooKeeper for coordination, synchronization, and configuration management.
 
 In summary, Apache ZooKeeper is a powerful and versatile distributed coordination service that simplifies the development and management of large-scale distributed systems. Its use cases range from configuration management and service discovery to distributed synchronization and leader election, making it a vital component in many big data and cloud computing ecosystems.
+
+***
+
+Apache ZooKeeper doesn't directly manage other systems but rather provides a set of coordination services that can be used to build distributed systems. It offers primitives for configuration management, leader election, service discovery, and distributed synchronization, which can be employed in various distributed systems to ensure efficient and reliable operation.
+
+Here are some examples of distributed systems that utilize ZooKeeper for coordination purposes:
+
+* Apache Kafka: Kafka is a distributed streaming platform that provides a publish-subscribe model and a log-based storage system. ZooKeeper is used to manage the Kafka cluster, including the configuration of broker nodes, managing topic configurations, and electing a controller for the cluster. ZooKeeper helps maintain the Kafka cluster's state, ensuring consistency and reliability.
+
+* Apache HBase: HBase is a distributed, columnar NoSQL database that runs on top of Hadoop Distributed File System (HDFS). ZooKeeper is used for coordination tasks such as managing server membership, monitoring the health of nodes, and facilitating master election. ZooKeeper helps maintain HBase cluster consistency and manage failover in case of node failures.
+
+* Apache Solr: Solr is a distributed search platform that provides full-text search, dynamic clustering, and other search-related features. In SolrCloud, ZooKeeper is used to manage cluster configuration, shard allocation, and leader election for each shard. ZooKeeper helps ensure the consistency and reliability of the Solr cluster.
+
+* Apache Mesos: Mesos is a distributed systems kernel that abstracts compute resources away from machines, enabling fault-tolerant and elastic distributed systems. ZooKeeper is used to coordinate the state of the Mesos cluster, including leader election and maintaining the state of various components. ZooKeeper helps ensure the robust operation of Mesos clusters.
+
+* Apache Druid: Druid is a distributed, column-oriented, real-time analytics data store. ZooKeeper is used for coordination tasks like leader election, managing the state of data segments, and discovering available services. ZooKeeper helps maintain Druid cluster consistency and manage failover in case of node failures.
+
+These examples illustrate how Apache ZooKeeper is employed in various distributed systems to manage their state, perform coordination tasks, and maintain consistency and reliability. While ZooKeeper doesn't directly manage these systems, it provides essential services that facilitate their efficient and reliable operation.
+
+***
+
